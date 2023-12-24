@@ -1,0 +1,87 @@
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        height: 100vh;
+        background-color: #f4f4f8;
+        background-image: url('images/network.png'); /* Replace with your chosen image URL */
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
+    #game-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background: rgba(255, 255, 255, 0.8); /* Semi-transparent white background for better readability */
+        padding: 30px;
+        border-radius: 20px;
+        box-shadow: 0px 0px 15px 5px rgba(0, 0, 0, 0.2);
+    }
+
+    #game-board {
+        display: grid;
+        grid-template-columns: repeat(3, 100px);
+        grid-template-rows: repeat(3, 100px);
+        gap: 10px;
+        position: relative;
+    }
+
+    .cell {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 2px solid #007bff;
+        font-size: 36px;
+        cursor: pointer;
+        height: 100px;
+        background-color: #f0f0f0;
+        color: #333;
+        transition: background-color 0.3s ease;
+    }
+
+    .cell:hover {
+        background-color: #e6f7ff;
+    }
+
+    .cell.taken {
+        pointer-events: none;
+        background-color: #ccc;
+    }
+
+    .cell.winning {
+        background-color: #ffcccb;
+    }
+
+    h1 {
+        color: #333;
+        margin-bottom: 20px;
+    }
+
+    #reset-button {
+        margin-top: 20px;
+        padding: 10px 20px;
+        font-size: 16px;
+        cursor: pointer;
+        background-color: #007bff;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        transition: background-color 0.3s ease;
+    }
+
+    #reset-button:hover {
+        background-color: #0056b3;
+    }
+
+    #game-result-message {
+        margin-top: 20px;
+        color: #007bff;
+        font-size: 20px;
+    }
+</style>
